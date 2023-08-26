@@ -1,0 +1,41 @@
+package com.msb.lrg.a;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.List;
+import java.util.function.Consumer;
+
+public class StreamRunner {
+
+	public static void main(String[] args) {
+		
+		System.out.println(System.getProperty("java.version"));
+		
+		List<String> names = new ArrayList<>(Arrays.asList("Ranjan", "Manmohan", "Mithun", "Subodh"));
+		
+		// using method reference
+		names.stream().forEach(System.out::println);
+		
+		System.out.println("***** //using lambda");
+		//using lambda
+		names.stream().forEach(name -> System.out.println(name));
+
+		System.out.println("***** using consumer functional class");
+		// using consumer functional class
+		names.forEach(new Consumer<String>() {
+			@Override
+			public void accept(String name) {
+				System.out.println(name);
+			}
+		});
+
+		System.out.println("***** using consumer lambda");
+		// using consumer lambda 
+		Consumer<String> consumerLambda = name -> System.out.println(name);
+		Comparator<String> c = (first,second) -> first.compareTo(second);
+		names.sort(c.reversed());
+		names.forEach(consumerLambda);
+	}
+
+}

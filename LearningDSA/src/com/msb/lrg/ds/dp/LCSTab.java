@@ -31,29 +31,8 @@ public class LCSTab {
 				}
 			}
 		}
-		printMemo(s1, s2, dp);
+		Utility.printDp(s1, s2, dp);
 		return dp[m][n];
 	}
 	
-	public static void printMemo(String s1, String s2, int[][] memo) {
-		char[] col = s1.toCharArray();
-		char[] row = s2.toCharArray();
-		for (int i = 0; i < memo[0].length; i++) {
-			if(i == 0)
-				System.out.printf("%8s", "");
-			else
-				System.out.printf("%2s  ", row[i-1]);
-		}
-		System.out.println("");
-		for (int i = 0; i < memo.length; i++) {
-			if(i == 0)
-				System.out.printf("%4s", "");
-			else
-				System.out.printf("%2s  ", col[i-1]);
-			for (int j = 0; j < memo[0].length; j++) {
-				System.out.printf("%2d  ", memo[i][j]);
-			}
-			System.out.println("");
-		}
-	}
 }

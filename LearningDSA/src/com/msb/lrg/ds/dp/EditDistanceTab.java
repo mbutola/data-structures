@@ -34,7 +34,7 @@ public class EditDistanceTab {
 				}
 			}
 		}
-		LCSTab.printMemo(s1, s2, dp);
+		Utility.printDp(s1, s2, dp);
 		return dp[m][n];
 	}
 

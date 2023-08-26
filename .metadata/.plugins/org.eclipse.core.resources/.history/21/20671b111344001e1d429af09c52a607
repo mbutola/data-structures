@@ -1,0 +1,21 @@
+package com.msb.lrg.ds.dp;
+
+public class GameStrategyRecursive2 {
+
+	public static void main(String[] args) {
+		int[] points = new int[] {20,5,4,6};
+		System.out.println("O/P : "  + GameStrategyRecursive2.solve(points, 0, points.length-1);
+	}
+	
+	public static int solve(int[] points, int i, int j) {
+		
+		if(i+1==j)
+			return Math.max(points[i], points[j]);
+		
+		int res = Math.max( points[i] + Math.min(solve(points, i+2,j),solve(points, i+1,j-1)),
+								points[j] + Math.min(solve(points, i+1,j-1),solve(points, i,j-2)));
+		
+		return res;
+	}
+	
+}

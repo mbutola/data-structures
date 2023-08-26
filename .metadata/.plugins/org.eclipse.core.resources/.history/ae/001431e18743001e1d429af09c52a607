@@ -1,0 +1,31 @@
+package com.msb;
+
+import java.util.Scanner;
+
+public class Remainder {
+
+	public static void main(String[] args) {
+		
+		Test.InputReader read = new Test.InputReader(System.in);
+		
+		int x = read.nextInt();
+		
+		for(int i=0; i<x; i++) {
+			
+			int a = read.nextInt();
+			String b = a + "";
+			
+			String res = "";
+			
+			for(int j=0; j<b.length(); j++) {
+				int digit = a%10;
+				res = res + digit;
+				a /= 10;
+			}
+			
+			System.out.println(res);
+		}
+		
+	}
+
+}

@@ -18,7 +18,7 @@ public class LCSMemo {
 	public static void main(String[] args) {
 		System.out.println("Longest lcs ("+s1+","+s2+") is : " 
 								+ LCSMemo.lcs(s1, s2, M, N));
-		LCSTab.printMemo(s1, s2, memo);
+		Utility.printDp(s1, s2, memo);
 	}
 
 	public static int lcs(String s1, String s2, int m, int n){

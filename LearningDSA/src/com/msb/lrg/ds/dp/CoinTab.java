@@ -43,7 +43,7 @@ public class CoinTab {
 			}
 		}
 		
-		LCSTab.printMemo("123", "1234", dp);
+		Utility.printDp("123", "1234", dp);
 		return dp[coins.size()][sum];
 		
 	}

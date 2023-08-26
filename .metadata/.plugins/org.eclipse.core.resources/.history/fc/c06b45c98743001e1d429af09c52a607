@@ -1,0 +1,135 @@
+package com.msb.generics;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class SuperAndExtends {
+	
+	private static List<? super C1> s = null;
+	private static List<? extends C1> e = null;
+
+	public static void main(String[] args) {
+
+		SuperAndExtends sae = new SuperAndExtends();
+
+//		//Super
+//		System.out.println("Object");
+//		s = new ArrayList<Object>();
+//		sae.addItemSuper(s);
+//		System.out.println("A");
+//		s = new ArrayList<A>();
+//		sae.addItemSuper(s);
+//		System.out.println("B1");
+//		s = new ArrayList<B1>();
+//		sae.addItemSuper(s);
+////		System.out.println("B2");
+////		s = new ArrayList<B2>();
+////		sae.addItemSuper(s);
+//		System.out.println("C1");
+//		s = new ArrayList<C1>();
+//		sae.addItemSuper(s);
+////		System.out.println("D1");
+////		s = new ArrayList<D1>();
+////		sae.addItemSuper(s);
+
+		//Extends
+//		System.out.println("Object");
+//		e = new ArrayList<Object>();
+//		sae.addItemExtends(e);
+//		System.out.println("A");
+//		e = new ArrayList<A>();
+//		sae.addItemExtends(e);
+//		System.out.println("B1");
+//		e = new ArrayList<B1>();
+//		sae.addItemExtends(e);
+//		System.out.println("B2");
+//		e = new ArrayList<B2>();
+//		sae.addItemExtends(e);
+		System.out.println("C1");
+		e = new ArrayList<C1>();
+		sae.addItemExtends(e);
+		System.out.println("D1");
+		e = new ArrayList<D1>();
+		sae.addItemExtends(e);
+	}
+	
+	private void addItemSuper(List<? super C1> s) {
+//		s.add(new Object());
+//		s.add(new A());
+//		s.add(new B1());`
+//		s.add(new B2());
+		s.add(new C1());
+//		s.add(new C2());
+		s.add(new D1());
+		s.forEach(System.out::println);
+	}
+	
+	private void addItemExtends(List<? extends C1> e) {
+//		e.add(new Object());
+//		e.add(new A());
+//		e.add(new B1());
+//		e.add(new B2());
+//		e.add(new C1());
+//		e.add(new C2());
+//		e.add(new D1());
+		e.forEach(System.out::println);
+	}
+
+
+}
+
+class A{
+	@Override
+	public String toString() {
+		return "A [toString()=" + super.toString() + "]";
+	}}
+class B1 extends A{
+	@Override
+	public String toString() {
+		return "B1 [toString()=" + super.toString() + "]";
+	}}
+class B2 extends A{
+	@Override
+	public String toString() {
+		return "B2 [toString()=" + super.toString() + "]";
+	}}
+class C1 extends B1{
+	@Override
+	public String toString() {
+		return "C1 [toString()=" + super.toString() + "]";
+	}}
+class C2 extends B1{
+	@Override
+	public String toString() {
+		return "C2 [toString()=" + super.toString() + "]";
+	}}
+class C3 extends B2{
+	@Override
+	public String toString() {
+		return "C3 [toString()=" + super.toString() + "]";
+	}}
+class C4 extends B2{
+	@Override
+	public String toString() {
+		return "C4 [toString()=" + super.toString() + "]";
+	}}
+class D1 extends C1{
+	@Override
+	public String toString() {
+		return "D1 [toString()=" + super.toString() + "]";
+	}}
+class D2 extends C2{
+	@Override
+	public String toString() {
+		return "D2 [toString()=" + super.toString() + "]";
+	}}
+class D3 extends C3{
+	@Override
+	public String toString() {
+		return "D3 [toString()=" + super.toString() + "]";
+	}}
+class D4 extends C4{
+	@Override
+	public String toString() {
+		return "D4 [toString()=" + super.toString() + "]";
+	}}

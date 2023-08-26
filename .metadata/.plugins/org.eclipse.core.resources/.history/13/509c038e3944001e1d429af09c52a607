@@ -1,0 +1,16 @@
+package com.msb.lrg.ds.dp;
+
+public class EggDropRecursive {
+
+	public static void main(String[] args) {
+		int floors = 10;
+		int eggs = 2;
+		System.out.println("O/P : " + EggDropRecursive.breakFloor(floors, eggs));
+	}
+	
+	public static int breakFloor(int floors, int e) {
+		
+		return 0;
+	}
+
+}

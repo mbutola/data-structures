@@ -1,0 +1,41 @@
+package com.msb.defaultmethods;
+
+public class PlayingCard implements Card {
+	
+	private Suit suit;
+	private Rank rank;
+
+	public PlayingCard(Suit suit, Rank rank) {
+		super();
+		this.suit = suit;
+		this.rank = rank;
+	}
+
+	public int hashCode() {
+		return ((suit.value()-1)*13)+rank.value();
+	}
+	
+	@Override
+	public int compareTo(Card o) {
+		// TODO Auto-generated method stub
+		return this.hashCode() - o.hashCode();
+	}
+
+	@Override
+	public Suit getSuit() {
+		// TODO Auto-generated method stub
+		return suit;
+	}
+
+	@Override
+	public Rank getRank() {
+		// TODO Auto-generated method stub
+		return rank;
+	}
+
+	@Override
+	public String toString() {
+		return "PlayingCard [suit=" + suit + ", rank=" + rank + "]";
+	}
+
+}

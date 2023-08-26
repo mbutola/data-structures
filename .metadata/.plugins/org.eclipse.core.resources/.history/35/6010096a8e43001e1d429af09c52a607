@@ -1,0 +1,18 @@
+package com.msb.lrg.ds.dp;
+
+public class ZeroOneKnapsackRecursive {
+
+	public static void main(String[] args) {
+		int[] val = new int[] {10,90,30,50};
+		int[] wt = new int[] {5,4,6,3};
+		int W = 90;
+		System.out.println("O/P : " + ZeroOneKnapsackRecursive.knapSack(val, wt, W, wt.length));
+	}
+	
+	public static int knapSack(int[] val, int[] wt, int W, int n) {
+		
+		int res = 0;
+		return res; 
+	}
+
+}
