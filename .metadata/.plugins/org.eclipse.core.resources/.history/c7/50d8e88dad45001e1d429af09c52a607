@@ -1,0 +1,38 @@
+package com.msb.lrg.ds.dp;
+
+public class AllocPageDP {
+
+	public static void main(String[] args) {
+		int[] pages = new int[] {10,20,30,40};
+		int k = 2;
+		System.out.println("O/P : " + AllocPageDP.allocPage(pages, k));
+	}
+
+	public static int allocPage(int[] pages, int k) {
+		
+		int n = pages.length;
+		int[][] dp = new int[k+1][n+1];
+		
+		for (int i = 0; i < n-1; i++) {
+			dp[0][i+1] = Utility.sumPages(pages, 0, i);
+		}
+
+		for (int i = 0; i < ; i++) {
+			dp[i][1] = pages[0];
+		}
+
+		for (int i = 2; i <=n; i++) {
+			for (int j = 2; j < k; j++) {
+				dp[i][j] = Integer.MAX_VALUE;
+				for (int l = i+1; l < j; l++) {
+					dp[i][j] = Math.min(dp[i][j], Math.max(dp[i][k-1],
+														Utility.sumPages(pages, i, n-1)));
+				}
+			}
+		}
+		
+		Utility.printDp(Utility.getList(n), Utility.getList(n), dp);
+		return dp[k][n];
+		
+	}
+}

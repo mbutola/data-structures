@@ -76,4 +76,26 @@ public class Utility {
 			System.out.println("");
 		}
 	}
+
+	public static boolean isPalindrome(String str, int i, int j) {
+        String sub_str = str.substring(i,j+1);
+		String rev = "";
+        boolean ans = false;
+ 
+        for (int k = j; k >= i; k--)
+            rev = rev + str.charAt(k);
+        
+        if (sub_str.equals(rev))
+            ans = true;
+
+        return ans;
+     }
+
+	public static int sumPages(int[] pages, int s, int f) {
+		int sum = 0;
+		for (int i = s; i <=f ; i++) {
+			sum+=pages[i];
+		}
+		return sum;
+	}
 }

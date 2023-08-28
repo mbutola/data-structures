@@ -1,0 +1,35 @@
+package com.msb.lrg.ds.dp;
+
+public class AllocPageRecursive {
+
+	public static void main(String[] args) {
+		int[] pages = new int[] {10,20,40,30,50};
+		int k = 3;
+		System.out.println("O/P : " + AllocPageRecursive.allocPage(pages, pages.length, k));
+	}
+
+	public static int allocPage(int[] pages, int n, int k) {
+		
+		if(k==1)
+			return sumPages(pages, 0, n-1);
+		
+		int res = Integer.MAX_VALUE;
+		
+		for (int k = i+1; k < j; k++) {
+			res = Math.min(res, allocPage(pages, i, k)
+									+ allocPage(pages, k, j)
+									+ pages[i]*pages[k]*pages[j]);
+		}
+		
+		return res;
+	}
+	
+	public static int sumPages(int[] pages, int s, int f) {
+		int sum = 0;
+		for (int i = 0; i <=f ; i++) {
+			sum+=pages[i];
+		}
+		return sum;
+	}
+
+}

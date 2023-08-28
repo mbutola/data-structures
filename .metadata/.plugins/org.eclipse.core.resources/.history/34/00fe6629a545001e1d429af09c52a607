@@ -1,0 +1,26 @@
+package com.msb.lrg.ds.dp;
+
+public class AllocPageRecursive {
+
+	public static void main(String[] args) {
+		int[] matrixes = new int[] {10,20,40,30,50};
+		System.out.println("O/P : " + AllocPageRecursive.allocPage(matrixes, 0, matrixes.length-1));
+	}
+
+	public static int allocPage(int[] mat, int i, int j) {
+		
+		if(i+1==j)
+			return 0;
+		
+		int res = Integer.MAX_VALUE;
+		
+		for (int k = i+1; k < j; k++) {
+			res = Math.min(res, allocPage(mat, i, k)
+									+ allocPage(mat, k, j)
+									+ mat[i]*mat[k]*mat[j]);
+		}
+		
+		return res;
+	}
+
+}
