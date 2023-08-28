@@ -57,17 +57,19 @@ public class Utility {
 		String[] col = getArray(s1);
 		String[] row = getArray(s2);
 		for (int i = 0; i < memo[0].length; i++) {
-			if(i == 0)
-				System.out.printf("%8s", "");
-			else
-				System.out.printf("%2s  ", row[i-1]);
+			if(i == 0) 
+				System.out.printf("%6s", 0);
+			else 
+				System.out.printf("%2s", row[i-1]);
+			System.out.printf("%2s", "");
 		}
 		System.out.println("");
 		for (int i = 0; i < memo.length; i++) {
 			if(i == 0)
-				System.out.printf("%4s", "");
+				System.out.printf("%2s",0);
 			else
-				System.out.printf("%2s  ", Integer.parseInt(col[i-1]));
+				System.out.printf("%2s", Integer.parseInt(col[i-1]));
+			System.out.printf("%2s", "");
 			for (int j = 0; j < memo[0].length; j++) {
 				System.out.printf("%2d  ", memo[i][j]);
 			}

@@ -1,0 +1,40 @@
+package com.msb.lrg.ds.dp;
+
+public class EggDropDp {
+
+	public static void main(String[] args) {
+		int floors = 3;
+		int eggs = 2;
+		System.out.println("O/P : " + EggDropDp.breakFloor(floors, eggs));
+	}
+	
+	public static int breakFloor(int f, int e) {
+		
+		int[][] dp = new int[f+1][e+1];
+		
+		for (int i=1; i<=e; i++) {
+			dp[0][i] = 0;
+			dp[1][i] = 1;
+		}
+
+		for (int i=1; i<=f; i++) {
+			dp[i][1] = i;
+		}
+		
+		for (int i=2; i<=f; i++) {
+			for (int j=1; j<=e; j++) {
+				dp[i][j] = Integer.MAX_VALUE;
+				for (int x=1; x<=i; x++) {
+					dp[i][j] = Math.min(dp[i][j], 
+										Math.max( dp[i-1][e-1], 
+													dp[f-i][e]
+												)
+										);
+					
+				}
+			}
+		}
+		Utility.printDp("123","12",dp);
+		return dp[f][e];
+	}
+}

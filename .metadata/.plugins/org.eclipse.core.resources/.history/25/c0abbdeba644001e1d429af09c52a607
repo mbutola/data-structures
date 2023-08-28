@@ -1,0 +1,25 @@
+package com.msb.lrg.ds.dp;
+
+import java.util.Arrays;
+
+public class MaxSumNonConsDpOpt {
+
+	public static void main(String[] args) {
+		int[] items = new int[] {10,5,15,20};
+		System.out.println("O/P : " + MaxSumNonConsDp.sum(items, items.length));
+	}
+
+	public static int sum(int[] items, int n) {
+		
+		int prev_2 = items[0];
+		int prev_1 = Math.max(dp[0], dp[1]);
+		
+		for (int i = 3; i <= n; i++) {
+			int temp = Math.max(prev_2, items[i-1] + prev_1) ;
+			prev_2 = prev_1;
+			prev_1 = temp;
+		}
+
+		return prev_1;
+	}
+}

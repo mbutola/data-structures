@@ -2,12 +2,12 @@ package com.msb.lrg.ds.dp;
 
 import java.util.Arrays;
 
-public class MinJumpsDp {
+public class MinJumpsDP {
 
 	public static void main(String[] args) {
 		int[] jumps = new int[] {3,4,2,1,2,1};
 		System.out.println(Arrays.toString(jumps));
-		System.out.println("O/P : " + MinJumpsDp.getJumps(jumps, jumps.length));
+		System.out.println("O/P : " + MinJumpsDP.getJumps(jumps, jumps.length));
 	}
 	
 	public static int getJumps(int[] jumps, int n) {

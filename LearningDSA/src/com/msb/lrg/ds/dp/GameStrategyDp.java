@@ -1,10 +1,10 @@
 package com.msb.lrg.ds.dp;
 
-public class GameStrategyDp {
+public class GameStrategyDP {
 
 	public static void main(String[] args) {
 		int[] points = new int[] {20,5,4,6,8,3};
-		System.out.println("O/P : "  + GameStrategyDp.solve(points, points.length));
+		System.out.println("O/P : "  + GameStrategyDP.solve(points, points.length));
 	}
 	
 	public static int solve(int[] points, int n) {

@@ -2,10 +2,10 @@ package com.msb.lrg.ds.dp;
 
 import java.util.Arrays;
 
-public class CutDp {
+public class CutDP {
 
 	public static void main(String[] args) {
-		System.out.println("O/P : " + CutDp.cut(9, 2, 3, 4));	}
+		System.out.println("O/P : " + CutDP.cut(9, 2, 3, 4));	}
 	
 	public static int cut(int len, int a, int b, int c) {
 		

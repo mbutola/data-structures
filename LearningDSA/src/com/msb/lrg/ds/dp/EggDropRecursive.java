@@ -3,8 +3,8 @@ package com.msb.lrg.ds.dp;
 public class EggDropRecursive {
 
 	public static void main(String[] args) {
-		int floors = 10;
-		int eggs = 2;
+		int floors = 5;
+		int eggs = 3;
 		System.out.println("O/P : " + EggDropRecursive.breakFloor(floors, eggs));
 	}
 	
@@ -21,7 +21,6 @@ public class EggDropRecursive {
 		for (int i = 1; i <= f; i++) {
 			res = Math.max(breakFloor(i-1, e-1), 
 					breakFloor(f-i, e));
-			System.out.println(i + " : " + res);
 			min = Math.min(min, res);
 		}
 		

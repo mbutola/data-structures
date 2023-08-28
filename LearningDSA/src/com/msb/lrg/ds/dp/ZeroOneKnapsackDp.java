@@ -3,13 +3,13 @@ package com.msb.lrg.ds.dp;
 import java.util.Arrays;
 import java.util.List;
 
-public class ZeroOneKnapsackDp {
+public class ZeroOneKnapsackDP {
 
 	public static void main(String[] args) {
 		int[] val = new int[] {10,40,30,50};
 		int[] wt = new int[] {5,4,6,3};
 		int W = 10;
-		System.out.println("O/P : " + ZeroOneKnapsackDp.knapSack(val, wt, W, wt.length));
+		System.out.println("O/P : " + ZeroOneKnapsackDP.knapSack(val, wt, W, wt.length));
 	}
 	
 	public static String[] getArray(List<String> lis){

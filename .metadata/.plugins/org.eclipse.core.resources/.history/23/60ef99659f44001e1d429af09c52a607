@@ -1,0 +1,16 @@
+package com.msb.lrg.ds.dp;
+
+public class MaxSumNonConsRecursive {
+
+	public static void main(String[] args) {
+		int[] items = new int[] {10,5,15,20};
+		System.out.println("O/P : " + MaxSumNonConsRecursive.sum(items, items.length));
+	}
+
+	public static int sum(int[] item, int n) {
+		
+		int res = 0;
+		
+		return res; 
+	}
+}

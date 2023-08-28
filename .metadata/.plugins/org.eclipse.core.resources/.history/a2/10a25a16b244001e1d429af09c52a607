@@ -1,0 +1,19 @@
+package com.msb.lrg.ds.dp;
+
+public class SubsetSumRecursive {
+
+	public static void main(String[] args) {
+		int[] arr = new int[] {10,5,2,6,3};
+		int sum = 8;
+		System.out.println("O/P : " + SubsetSumRecursive.solve(arr, sum, arr.length));
+	}
+	
+	public static int solve(int[] arr, int sum, int n) {
+		
+		int res = 0;
+		
+		
+		return res;
+	}
+
+}

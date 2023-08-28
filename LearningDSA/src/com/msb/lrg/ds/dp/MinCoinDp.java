@@ -1,11 +1,11 @@
 package com.msb.lrg.ds.dp;
 
-public class MinCoinDp {
+public class MinCoinDP {
 
 	public static void main(String[] args) {
 		int[] coins = new int[] {3,4,1};
 		int sum = 5;
-		System.out.println("O/P : " + MinCoinDp.getCoin(coins, sum));
+		System.out.println("O/P : " + MinCoinDP.getCoin(coins, sum));
 	}
 	
 	public static int getCoin(int[] coins, int sum) {

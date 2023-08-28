@@ -1,0 +1,8 @@
+package com.msb.lrg.ds.dp;
+
+public class SubsetSumRecursive {
+
+	public static void main(String[] args) {
+	}
+
+}

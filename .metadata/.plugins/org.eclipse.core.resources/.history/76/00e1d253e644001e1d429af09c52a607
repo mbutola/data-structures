@@ -1,0 +1,21 @@
+package com.msb.lrg.ds.dp;
+
+public class MtxMultResursive {
+
+	public static void main(String[] args) {
+		int[] matrixes = new int[] {};
+		System.out.println("O/P : " + MtxMultResursive.multiplications(matrixes, matrixes.length, 0, matrixes.length-1));
+	}
+
+	public static int multiplications(int[] mat, int n, int i, int j) {
+		
+		if(n <=2)
+			return 0;
+		
+		if(n == 3)
+			return mat[i]*mat[i+1]*mat[j];
+		
+		return Math.min(multiplications(mat, n-1, i+1, j),
+							multiplications(mat, n-1, i, j-1));
+	}
+}
