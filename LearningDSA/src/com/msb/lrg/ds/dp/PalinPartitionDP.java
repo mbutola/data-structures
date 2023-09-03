@@ -1,5 +1,7 @@
 package com.msb.lrg.ds.dp;
 
+import com.msb.lrg.ds.Utility;
+
 public class PalinPartitionDP {
 
 	public static void main(String[] args) {

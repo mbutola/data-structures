@@ -1,5 +1,7 @@
 package com.msb.lrg.ds.dp;
 
+import com.msb.lrg.ds.Utility;
+
 public class LngComSubStrMemo {
 
 	public static String s1 = "CDAXMZ";

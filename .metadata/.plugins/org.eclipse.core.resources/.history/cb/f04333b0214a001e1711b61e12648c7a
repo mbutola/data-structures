@@ -1,0 +1,18 @@
+package com.msb.lrg.ds.tree;
+
+public class TreeTraversal {
+
+	public static void main(String[] args) {
+
+		TreeTraversal.printTree(null);
+	}
+
+	
+	public static void printTree(int[] tree) {
+		
+		System.out.printf("%160s", "1");
+		
+	}
+	
+}
+
