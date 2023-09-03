@@ -1,0 +1,69 @@
+package com.msb.lrg.ds.tree;
+
+import com.msb.lrg.ds.Node;
+import com.msb.lrg.ds.Utility;
+
+public class TreeHeight {
+
+	public static void main(String[] args) {
+//		Node root =  TreeHeight.createTree();
+//		Utility.printBinaryTree(root);
+
+        Node root = new Node(11);
+        Node temp = null;
+        temp = new Node(21);
+        root.left = temp;
+        temp = new Node(31);
+        root.right = temp;
+ 
+        temp = new Node(41);
+        root.left.left = temp;
+        temp = new Node(51);
+        root.left.right = temp;
+        temp = new Node(61);
+        root.right.left = temp;
+        temp = new Node(71);
+        root.right.right = temp;
+ 
+        temp = new Node(81);
+        root.left.left.left = temp;
+        temp = new Node(91);
+        root.left.left.right = temp;
+        temp = new Node(10);
+        root.left.right.left = temp;
+        temp = new Node(11);
+        root.left.right.right = temp;
+        temp = new Node(12);
+        root.right.left.left = temp;
+        temp = new Node(13);
+        root.right.left.right = temp;
+        temp = new Node(14);
+        root.right.right.left = temp;
+        temp = new Node(15);
+        root.right.right.right = temp;
+ 
+        Utility.printBinaryTree(root);
+        
+	}
+	
+	public static int height(Node root) {
+		return 0;
+	}
+
+	public static Node createTree() {
+		Node root = new Node(10);
+		Node temp = null;
+		
+		temp = new Node(8);
+		root.left = temp;
+		temp = new Node(30);
+		root.right = temp;
+		
+		temp = new Node(40);
+		root.right.left = temp;
+		temp = new Node(50);
+		root.right.right = temp;
+		
+		return root;
+	}
+}

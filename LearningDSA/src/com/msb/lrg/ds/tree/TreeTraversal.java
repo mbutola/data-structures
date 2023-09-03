@@ -19,7 +19,7 @@ public class TreeTraversal {
 	public static void inOrder(Node root) {
 		if(root != null) {
 			inOrder(root.left);
-			System.out.printf("%4s", root.data);
+			System.out.printf("%2s", root.data);
 			inOrder(root.right);
 		}
 	}

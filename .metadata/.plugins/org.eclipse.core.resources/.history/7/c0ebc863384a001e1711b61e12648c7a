@@ -1,0 +1,23 @@
+package com.msb.lrg.ds.tree;
+
+import com.msb.lrg.ds.Node;
+import com.msb.lrg.ds.Utility;
+
+public class TreeHeight {
+
+	public static void main(String[] args) {
+		Node root =  TreeHeight.createTree();
+		Utility.printBinaryTree(root);
+	}
+	
+	public static int height(Node root) {
+		return 0;
+	}
+
+	public static Node createTree() {
+		Node root = new Node();
+		
+		
+		return root;
+	}
+}

@@ -1,0 +1,15 @@
+package com.msb.lrg.ds.tree;
+
+import com.msb.lrg.ds.Node;
+import com.msb.lrg.ds.Utility;
+
+public class TreeSize {
+
+	public static void main(String[] args) {
+		Node root =  TreeSize.createTree();
+		Utility.printBinaryTree(root);
+		
+        System.out.print("O/P : " + TreeSize.size(root);
+	}
+
+}

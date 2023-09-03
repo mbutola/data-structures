@@ -151,7 +151,7 @@ public class Utility {
             System.out.print(" ");
         }
         else {
-            System.out.print(removed.data);
+            System.out.printf("%2s", removed.data);
         }
     }
  
