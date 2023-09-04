@@ -12,4 +12,11 @@
 <fullyQualifiedTypeName name="com.msb.lrg.ds.dp.SubsetSumRecursive"/>
 <fullyQualifiedTypeName name="com.msb.lrg.ds.dp.MtxMultResursive"/>
 <fullyQualifiedTypeName name="com.msb.lrg.ds.dp.Utility"/>
+<fullyQualifiedTypeName name="com.msb.lrg.ds.tree.TreeTraversal"/>
+<fullyQualifiedTypeName name="com.msb.lrg.ds.tree.TreeHeight"/>
+<fullyQualifiedTypeName name="com.msb.lrg.ds.Node"/>
+<fullyQualifiedTypeName name="com.msb.lrg.ds.Utility"/>
+<fullyQualifiedTypeName name="java.util.Queue"/>
+<fullyQualifiedTypeName name="java.util.LinkedList"/>
+<fullyQualifiedTypeName name="java.lang.Math"/>
 </qualifiedTypeNameHistroy>
