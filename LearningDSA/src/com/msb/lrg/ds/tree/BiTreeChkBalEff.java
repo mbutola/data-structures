@@ -8,20 +8,20 @@ public class BiTreeChkBalEff {
 	public static void main(String[] args) {
 		Node root =  BiTreeChkBalEff.createTree();
 		Utility.printBinaryTree(root);
-		boolean res = (BiTreeChkBalEff.isBal(root) != -1) ? true : false;
+		boolean res = (BiTreeChkBalEff.isBalance(root) != -1) ? true : false;
         System.out.print("O/P : " + res);
 	}
 
-	public static int isBal(Node root) {
+	public static int isBalance(Node root) {
 		
 		if(root == null)
 			return 0;
 		
-		int lh = isBal(root.left);
+		int lh = isBalance(root.left);
 		if(lh == -1)
 			return -1;
 		
-		int rh = isBal(root.right);
+		int rh = isBalance(root.right);
 		if(rh == -1)
 			return -1;
 		

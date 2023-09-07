@@ -1,22 +1,23 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="com.msb.lrg.ds.dp.ZeroOneKnapsackRecursive"/>
-<fullyQualifiedTypeName name="java.awt.List"/>
-<fullyQualifiedTypeName name="java.util.List"/>
-<fullyQualifiedTypeName name="java.util.ArrayList"/>
-<fullyQualifiedTypeName name="com.msb.lrg.ds.dp.GameStrategyRecursive1"/>
-<fullyQualifiedTypeName name="com.msb.lrg.ds.dp.CountBSTDp"/>
-<fullyQualifiedTypeName name="java.lang.Integer"/>
-<fullyQualifiedTypeName name="com.msb.lrg.ds.dp.MaxSumNonConsRecursive"/>
-<fullyQualifiedTypeName name="java.util.Arrays"/>
-<fullyQualifiedTypeName name="com.msb.lrg.ds.dp.SubsetSumRecursive"/>
-<fullyQualifiedTypeName name="com.msb.lrg.ds.dp.MtxMultResursive"/>
-<fullyQualifiedTypeName name="com.msb.lrg.ds.dp.Utility"/>
-<fullyQualifiedTypeName name="com.msb.lrg.ds.tree.TreeTraversal"/>
-<fullyQualifiedTypeName name="com.msb.lrg.ds.tree.TreeHeight"/>
-<fullyQualifiedTypeName name="com.msb.lrg.ds.Node"/>
-<fullyQualifiedTypeName name="com.msb.lrg.ds.Utility"/>
-<fullyQualifiedTypeName name="java.util.Queue"/>
-<fullyQualifiedTypeName name="java.util.LinkedList"/>
-<fullyQualifiedTypeName name="java.lang.Math"/>
+    <fullyQualifiedTypeName name="com.msb.lrg.ds.dp.ZeroOneKnapsackRecursive"/>
+    <fullyQualifiedTypeName name="java.awt.List"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="com.msb.lrg.ds.dp.GameStrategyRecursive1"/>
+    <fullyQualifiedTypeName name="com.msb.lrg.ds.dp.CountBSTDp"/>
+    <fullyQualifiedTypeName name="com.msb.lrg.ds.dp.MaxSumNonConsRecursive"/>
+    <fullyQualifiedTypeName name="com.msb.lrg.ds.dp.SubsetSumRecursive"/>
+    <fullyQualifiedTypeName name="com.msb.lrg.ds.dp.MtxMultResursive"/>
+    <fullyQualifiedTypeName name="com.msb.lrg.ds.dp.Utility"/>
+    <fullyQualifiedTypeName name="com.msb.lrg.ds.tree.TreeTraversal"/>
+    <fullyQualifiedTypeName name="com.msb.lrg.ds.tree.TreeHeight"/>
+    <fullyQualifiedTypeName name="java.util.Queue"/>
+    <fullyQualifiedTypeName name="java.util.LinkedList"/>
+    <fullyQualifiedTypeName name="java.lang.Math"/>
+    <fullyQualifiedTypeName name="com.msb.lrg.ds.Node"/>
+    <fullyQualifiedTypeName name="com.msb.lrg.ds.Utility"/>
+    <fullyQualifiedTypeName name="java.util.Arrays"/>
+    <fullyQualifiedTypeName name="java.util.Stack"/>
+    <fullyQualifiedTypeName name="java.lang.Integer"/>
 </qualifiedTypeNameHistroy>

@@ -1,0 +1,31 @@
+package com.msb.lrg.ds.tree;
+
+import com.msb.lrg.ds.Node;
+
+public class BiTreeSpiralTrav {
+
+	public static void main(String[] args) {
+		
+	}
+
+	public static Node createTree() {
+		Node root = new Node(1);
+		Node temp = null;
+		
+		temp = new Node(2);
+		root.left = temp;
+		temp = new Node(3);
+		root.right = temp;
+
+		temp = new Node(4);
+		root.left.left = temp;
+		temp = new Node(5);
+		root.left.right = temp;
+		temp = new Node(6);
+		root.right.left = temp;
+		temp = new Node(7);
+		root.right.right = temp;
+
+		return root;
+	
+}

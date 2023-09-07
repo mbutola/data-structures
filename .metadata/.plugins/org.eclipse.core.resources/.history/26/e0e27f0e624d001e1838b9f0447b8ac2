@@ -1,0 +1,10 @@
+package com.msb.lrg.ds.tree;
+
+public class BiTreeConsFmPreAndInOrd {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
