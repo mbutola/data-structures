@@ -36,6 +36,17 @@ public class BiTreeCntNodesEff {
 		
 	}
 	
+	public static int getHeight(Node root){
+		int h = 0;
+
+		while(root.left != null) {
+			h++;
+			root = root.left;
+		}
+		
+		return h;
+	}
+	
 	public static Node createTree() {
 		Node root = new Node(10);
 		Node temp = null;
