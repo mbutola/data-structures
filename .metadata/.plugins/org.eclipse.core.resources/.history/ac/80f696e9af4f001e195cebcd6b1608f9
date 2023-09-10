@@ -1,0 +1,44 @@
+package com.msb.lrg.ds.tree;
+
+import com.msb.lrg.ds.Node;
+import com.msb.lrg.ds.Utility;
+
+public class BiTreeBurn {
+
+	public static void main(String[] args) {
+		Node root = BiTreeBurn.createTree();
+		Utility.printBinaryTree(root);
+
+		int in = 50;
+		System.out.println("O/P : " + BiTreeBurn.burn(root, int in));
+	}
+
+	public static int burn(Node root, int in) {
+		return 0;
+	}
+	
+	public static Node createTree() {
+		Node root = new Node(10);
+		Node temp = null;
+
+		temp = new Node(20);
+		root.left = temp;
+
+		temp = new Node(30);
+		root.left.left = temp;
+		temp = new Node(5);
+		root.left.right = temp;
+
+		temp = new Node(40);
+		root.left.left.left = temp;
+		temp = new Node(50);
+		root.left.left.right = temp;
+
+		temp = new Node(60);
+		root.left.left.left.left = temp;
+		temp = new Node(70);
+		root.left.left.left.left.left = temp;
+
+		return root;
+	}
+}

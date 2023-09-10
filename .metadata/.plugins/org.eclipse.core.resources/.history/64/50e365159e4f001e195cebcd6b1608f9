@@ -1,0 +1,83 @@
+package com.msb.lrg.ds.tree;
+
+import java.util.List;
+import java.util.ArrayList;
+
+import com.msb.lrg.ds.Node;
+import com.msb.lrg.ds.Utility;
+
+public class BiTreeLowCommAncesNaive {
+
+//	public static List<Integer> p1 = new ArrayList<Integer>(); 
+//	public static List<Integer> p2 = new ArrayList<Integer>(); 
+	
+	public static void main(String[] args) {
+		Node root =  BiTreeLowCommAncesNaive.createTree();
+		Utility.printBinaryTree(root);
+		int d1 = 30;
+		int d2 = 80;
+        System.out.println("O/P : " + BiTreeLowCommAncesNaive.getLCA(root, d1, d2));
+	}
+	
+	public static int getLCA(Node root, int d1, int d2) {
+		
+		List<Integer> p1 = new ArrayList<Integer>(); 
+		List<Integer> p2 = new ArrayList<Integer>(); 
+
+		if(!buildPath(root, p1, d1) || !buildPath(root, p2, d2))
+			return -1;
+		
+		for (int i = 0; i < p1.size() && i < p2.size(); i++) {
+			if(p1.get(i) != p2.get(i)) {
+				return p1.get(1-1); 
+			}
+		}
+		return -1;
+	}
+	
+	public static boolean buildPath(Node root, List<Integer> p, int d) {
+
+		if(root == null)
+			return false;
+		
+		p.add(root.data);
+
+		if(root.data == d)
+			return true;
+		
+		if(buildPath(root.left, p, d) || buildPath(root.right, p, d)) {
+			return true;
+		}
+		
+		p.remove(p.size()-1);
+		
+		return false;
+	}
+
+	public static Node createTree() {
+		Node root = new Node(10);
+		Node temp = null;
+		
+		temp = new Node(50);
+		root.left = temp;
+		temp = new Node(60);
+		root.right = temp;
+
+		temp = new Node(70);
+		root.left.left = temp;
+		temp = new Node(20);
+		root.left.right = temp;
+
+		temp = new Node(40);
+		root.left.left.left = temp;
+		temp = new Node(90);
+		root.left.right.left = temp;
+		temp = new Node(80);
+		root.left.right.right = temp;
+
+		temp = new Node(30);
+		root.left.right.left.left = temp;
+
+		return root;
+	}
+}
