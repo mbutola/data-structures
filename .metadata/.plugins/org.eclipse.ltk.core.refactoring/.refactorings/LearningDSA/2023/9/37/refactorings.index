@@ -5,3 +5,10 @@
 1694355427655	Rename type 'BiTreeCompCntEff'
 1694366891334	Rename method 'serialize'
 1694373093239	Rename type 'BiTreeIterPreOrdTrav'
+1694876366066	Rename type 'GraphContainer'
+1694876809431	Rename type 'GraphConstructor'
+1694876893454	Rename type 'Represent_Graph_Adjacency_Matrix'
+1694877171432	Rename compilation unit 'GraphAdjacencyMatrix.java'
+1694895865041	Delete element
+1694895978890	Rename type 'WeightedGraph'
+1694896273642	Rename type 'Graph'
