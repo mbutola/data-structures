@@ -5,24 +5,23 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 import com.msb.lrg.ds.Edge;
-import com.msb.lrg.ds.Graph;
-import com.msb.lrg.ds.Graph.Direction;
+import com.msb.lrg.ds.AdjGraph;
+import com.msb.lrg.ds.AdjGraph.Direction;
 
-public class GraphBFS {
+public class UnDirGraphBFS {
 
 	public static void main(String[] args) {
-		Graph graph = GraphBFS.getGraph();
+		AdjGraph graph = UnDirGraphBFS.getGraph();
 		graph.printGraph();
 		
 		System.out.printf("OP : ");
-		GraphBFS.printBFS(graph, 5, 0);
+		UnDirGraphBFS.printBFS(graph, 5, 0);
 	}
 	
-	public static void printBFS(Graph graph, int v, int s) {
+	public static void printBFS(AdjGraph graph, int v, int s) {
 		
 		boolean[] visited = new boolean[v];
 		Queue<Integer> queue = new LinkedList<Integer>();
-		ArrayList<ArrayList<Edge>> adj = graph.getList();
 		
 		queue.add(s);
 		visited[s] = true;
@@ -30,7 +29,7 @@ public class GraphBFS {
 		while(!queue.isEmpty()) {
 			int s1 = queue.poll();
 			System.out.printf("%4s", s1);
-			for(Edge e : adj.get(s1)) {
+			for(Edge e : graph.get(s1)) {
 				if(!visited[e.destination]) {
 					queue.add(e.destination);
 					visited[e.destination] = true;
@@ -39,11 +38,11 @@ public class GraphBFS {
 		}
 	}
 
-    public static Graph getGraph() {
+    public static AdjGraph getGraph() {
 
 		Direction dir = Direction.BI;
     	int vertices = 5;
-		Graph graph = new Graph(vertices);
+		AdjGraph graph = new AdjGraph(vertices);
 		graph.addEgde(0, 1, 1, dir);
 		graph.addEgde(0, 2, 1, dir);
 		graph.addEgde(1, 2, 1, dir);

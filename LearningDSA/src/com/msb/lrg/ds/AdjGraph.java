@@ -2,12 +2,12 @@ package com.msb.lrg.ds;
 
 import java.util.ArrayList;
 
-public class Graph {
+public class AdjGraph {
 
     int vertices;
     ArrayList<ArrayList<Edge>> adjacencylist;
 
-	public Graph(int vertices) {
+	public AdjGraph(int vertices) {
         this.vertices = vertices;
         adjacencylist = new ArrayList<ArrayList<Edge>>();
         //initialize adjacency lists for all the vertices

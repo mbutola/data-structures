@@ -5,35 +5,34 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 import com.msb.lrg.ds.Edge;
-import com.msb.lrg.ds.Graph;
-import com.msb.lrg.ds.Graph.Direction;
+import com.msb.lrg.ds.AdjGraph;
+import com.msb.lrg.ds.AdjGraph.Direction;
 
-public class GraphDisconnBFS {
+public class UnDirGraphDisconnBFS {
 
 	public static void main(String[] args) {
 		int vertices = 7;
 
-		Graph graph = GraphDisconnBFS.getGraph(vertices);
+		AdjGraph graph = UnDirGraphDisconnBFS.getGraph(vertices);
 		graph.printGraph();
 						
 		System.out.println("OP :");
-		GraphDisconnBFS.printBFSDiscont(graph, vertices);
+		UnDirGraphDisconnBFS.printBFSDiscont(graph, vertices);
 	}
 
-	public static void printBFSDiscont(Graph graph, int vertices) {
+	public static void printBFSDiscont(AdjGraph graph, int vertices) {
 		boolean[] visited = new boolean[vertices];
 		for (int i = 0; i < vertices; i++) {
 			if(!visited[i]) {
-				GraphDisconnBFS.printBFS(graph, visited, vertices, i);
+				UnDirGraphDisconnBFS.printBFS(graph, visited, vertices, i);
 				System.out.println("");
 			}
 		}
 	}
 	
-	public static void printBFS(Graph graph, boolean[] visited, int vertices, int source) {
+	public static void printBFS(AdjGraph graph, boolean[] visited, int vertices, int source) {
 		
 		Queue<Integer> queue = new LinkedList<Integer>();
-		ArrayList<ArrayList<Edge>> adj = graph.getList();
 		
 		queue.add(source);
 		visited[source] = true;
@@ -41,7 +40,7 @@ public class GraphDisconnBFS {
 		while(!queue.isEmpty()) {
 			int s1 = queue.poll();
 			System.out.printf("%4s", s1);
-			for(Edge e : adj.get(s1)) {
+			for(Edge e : graph.get(s1)) {
 				if(!visited[e.destination]) {
 					queue.add(e.destination);
 					visited[e.destination] = true;
@@ -50,10 +49,10 @@ public class GraphDisconnBFS {
 		}
 	}
 
-    public static Graph getGraph(int vertices) {
+    public static AdjGraph getGraph(int vertices) {
 
 		Direction dir = Direction.BI;
-		Graph graph = new Graph(vertices);
+		AdjGraph graph = new AdjGraph(vertices);
 		graph.addEgde(0, 1, 1, dir);
 		graph.addEgde(0, 2, 1, dir);
 		graph.addEgde(1, 3, 1, dir);
