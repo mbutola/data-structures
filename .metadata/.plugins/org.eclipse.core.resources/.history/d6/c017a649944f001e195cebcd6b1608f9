@@ -1,9 +1,0 @@
-package com.msb.lrg.ds.tree;
-
-public class BiTreeLowCommAnces {
-
-	public static void main(String[] args) {
-
-	}
-
-}

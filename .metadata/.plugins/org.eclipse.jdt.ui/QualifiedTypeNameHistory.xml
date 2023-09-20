@@ -19,6 +19,9 @@
     <fullyQualifiedTypeName name="com.msb.lrg.ds.tree.Distance"/>
     <fullyQualifiedTypeName name="java.awt.List"/>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
-    <fullyQualifiedTypeName name="java.util.Arrays"/>
+    <fullyQualifiedTypeName name="com.msb.lrg.ds.graph.DirGraphDetCycle"/>
+    <fullyQualifiedTypeName name="com.msb.lrg.ds.Graph.Direction"/>
     <fullyQualifiedTypeName name="java.util.Stack"/>
+    <fullyQualifiedTypeName name="com.msb.lrg.ds.MatGraph"/>
+    <fullyQualifiedTypeName name="java.util.Arrays"/>
 </qualifiedTypeNameHistroy>
