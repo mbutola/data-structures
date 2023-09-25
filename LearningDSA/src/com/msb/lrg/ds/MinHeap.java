@@ -25,6 +25,7 @@ public class MinHeap {
 		for (int i = 0; i < data.length; i++) {
 			this.data[i] = data[i];	
 		}
+		size = data.length;
 		this.capacity = capacity;
 		System.out.println(Arrays.toString(this.data));
 	}
@@ -40,5 +41,19 @@ public class MinHeap {
 
 	public int parent(int i) {
 		return (i-1)/2;
+	}
+
+	public void insert(int val){
+		data[size++] = val;
+		for (int i = size-1; i != 0 && data[i] < data[parent(i)];) {
+			swap(parent(i), i);
+			i = parent(i);
+		}
+	}
+	
+	public void swap(int s, int d) {
+		int temp = 	data[s];
+		data[s] = data[d];
+		data[d] = temp; 
 	}
 }
