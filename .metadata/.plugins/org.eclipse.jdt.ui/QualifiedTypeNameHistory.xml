@@ -12,16 +12,22 @@
     <fullyQualifiedTypeName name="com.msb.lrg.ds.tree.TreeHeight"/>
     <fullyQualifiedTypeName name="java.util.Queue"/>
     <fullyQualifiedTypeName name="java.util.LinkedList"/>
-    <fullyQualifiedTypeName name="com.msb.lrg.ds.Utility"/>
-    <fullyQualifiedTypeName name="java.lang.Math"/>
-    <fullyQualifiedTypeName name="java.lang.Integer"/>
     <fullyQualifiedTypeName name="com.msb.lrg.ds.Node"/>
     <fullyQualifiedTypeName name="com.msb.lrg.ds.tree.Distance"/>
     <fullyQualifiedTypeName name="java.awt.List"/>
-    <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="com.msb.lrg.ds.graph.DirGraphDetCycle"/>
     <fullyQualifiedTypeName name="com.msb.lrg.ds.Graph.Direction"/>
-    <fullyQualifiedTypeName name="java.util.Stack"/>
     <fullyQualifiedTypeName name="com.msb.lrg.ds.MatGraph"/>
+    <fullyQualifiedTypeName name="java.util.Iterator"/>
+    <fullyQualifiedTypeName name="java.util.Collections"/>
+    <fullyQualifiedTypeName name="java.util.stream.Collector"/>
+    <fullyQualifiedTypeName name="java.util.stream.Collectors"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="java.lang.Integer"/>
+    <fullyQualifiedTypeName name="java.lang.Math"/>
+    <fullyQualifiedTypeName name="java.util.Stack"/>
+    <fullyQualifiedTypeName name="com.msb.lrg.ds.Edge"/>
     <fullyQualifiedTypeName name="java.util.Arrays"/>
+    <fullyQualifiedTypeName name="com.msb.lrg.ds.Subset"/>
+    <fullyQualifiedTypeName name="com.msb.lrg.ds.Utility"/>
 </qualifiedTypeNameHistroy>

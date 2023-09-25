@@ -1,7 +1,6 @@
 package com.msb.lrg.ds;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -111,6 +110,7 @@ public class Utility {
         double numberOfElements
             = (Math.pow(2, (height + 1)) - 1);
         // System.out.println(numberOfElements);
+        int index = 0;
         while (counter <= height) {
             Node removed = treeLevel.removeFirst();
             if (temp.isEmpty()) {
@@ -197,4 +197,30 @@ public class Utility {
 			subsets[xroot].rank++; 
 		} 
 	} 
+
+	public static void printBinaryHeap(MinHeap heap) {
+	    int a[] = heap.data;
+	    StringBuilder sb = new StringBuilder();
+	    int max=0;
+	    for(int i=0;i<10;i++){
+	        for(int j=0;j<Math.pow(2,i)&&j+Math.pow(2,i)<10;j++){
+	            if(j>max){
+	                max=j;
+	            }
+	        }
+	    }
+
+	    for(int i=0;i<10;i++){
+	        for(int j=0;j<Math.pow(2,i)&&j+Math.pow(2,i)<10;j++){
+	            for(int k=0;(k<max/((int)Math.pow(2, i)));k++){
+	                sb.append(" ");
+	            }
+	            sb.append(a[j+(int)Math.pow(2,i)-1]+" ");
+	        }
+	        sb.append("\n");
+	    }
+	    System.out.println(sb.toString());
+	}
+
 }
+
