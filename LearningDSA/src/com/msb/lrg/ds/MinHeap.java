@@ -46,14 +46,45 @@ public class MinHeap {
 	public void insert(int val){
 		data[size++] = val;
 		for (int i = size-1; i != 0 && data[i] < data[parent(i)];) {
-			swap(parent(i), i);
+			Utility.swap(data, parent(i), i);
 			i = parent(i);
 		}
 	}
-	
-	public void swap(int s, int d) {
-		int temp = 	data[s];
-		data[s] = data[d];
-		data[d] = temp; 
+
+	public void heapify(int i) {
+		int lt = left(i);
+		int rt = right(i);
+		int smallest = i;
+		
+		if(lt < size && data[lt] < data[i])
+			smallest = lt;
+		if(rt < size && data[rt] < data[smallest])
+			smallest = rt;
+		
+		if(smallest != i) {
+			Utility.swap(data, i, smallest);
+			heapify(smallest);
+		}
 	}
+
+	public int extractMin() {
+		int res = 0;
+		if(size == 0)
+			return Integer.MAX_VALUE;
+		
+		if(size == 1) {
+			size--;
+			res = data[0];
+			data[0] = 0;
+		}
+		
+		Utility.swap(data, 0, size-1);
+		res = data[size-1];
+		data[size-1] = 0;
+		size--;
+		heapify(0);
+		
+		return res;
+	}
+
 }

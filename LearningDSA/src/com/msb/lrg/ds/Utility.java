@@ -228,5 +228,11 @@ public class Utility {
 		return (int) Math.ceil(Math.log(N + 1) / Math.log(2)) - 1;
 	}
 
+	public static void swap(int[] data, int s, int d) {
+		int temp = 	data[s];
+		data[s] = data[d];
+		data[d] = temp; 
+	}
+
 }
 

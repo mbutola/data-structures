@@ -31,4 +31,5 @@
     <fullyQualifiedTypeName name="java.util.Arrays"/>
     <fullyQualifiedTypeName name="java.util.Collections"/>
     <fullyQualifiedTypeName name="com.msb.lrg.ds.MinHeap"/>
+    <fullyQualifiedTypeName name="com.msb.lrg.ds.heap.BinaryHeapInsert"/>
 </qualifiedTypeNameHistroy>
