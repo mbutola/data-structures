@@ -1,9 +1,6 @@
 package com.msb.lrg.ds;
 
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
-import java.util.stream.Collectors;
 
 public class Heap {
 	
@@ -69,20 +66,19 @@ public class Heap {
 
 	public int extractMin() {
 		int res = 0;
-		if(size == 0)
+		if(size == 0) {
 			return Integer.MAX_VALUE;
-		
-		if(size == 1) {
+		}else if(size == 1) {
 			size--;
 			res = data[0];
 			data[0] = 0;
+		}else {
+			Utility.swap(data, 0, size-1);
+			res = data[size-1];
+			data[size-1] = 0;
+			size--;
+			minHeapify(0);
 		}
-		
-		Utility.swap(data, 0, size-1);
-		res = data[size-1];
-		data[size-1] = 0;
-		size--;
-		minHeapify(0);
 		
 		return res;
 	}
@@ -138,4 +134,9 @@ public class Heap {
 			maxHeapify(0);
 		}
 	}
+	
+	public int peek() {
+		return data[0];
+	}
+
 }
