@@ -3,15 +3,16 @@ package com.msb.lrg.ds.heap;
 import com.msb.lrg.ds.Heap;
 import com.msb.lrg.ds.Utility;
 
-public class BiHeapExtractMin {
+public class BiHeapDelete {
 
 	public static void main(String[] args) {
-		int[] data = new int[]{20,25,30,35,40,80,32,100,70,60};
+		int[] data = new int[]{10,20,30,40,50,35,38,45};
 		Heap heap = new Heap(data, 15);
 		Utility.printBinaryHeap(heap);
 		
-		System.out.println("O/P : " + heap.extractMin());
+		int key = 3;
+		heap.delete(key);
 		Utility.printBinaryHeap(heap);
 	}
-	
+
 }

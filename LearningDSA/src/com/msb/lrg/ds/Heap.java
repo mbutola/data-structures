@@ -5,13 +5,13 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class MinHeap {
+public class Heap {
 	
 	public int[] data;
 	public int size;
 	public int capacity;
 
-	public MinHeap(int capacity) {
+	public Heap(int capacity) {
 		super();
 		this.data = new int[capacity];
 		this.size = 0;
@@ -19,7 +19,7 @@ public class MinHeap {
 	}
 	
 
-	public MinHeap(int[] data, int capacity) {
+	public Heap(int[] data, int capacity) {
 		super();
 		this.data = new int[capacity];
 		for (int i = 0; i < data.length; i++) {
@@ -51,7 +51,7 @@ public class MinHeap {
 		}
 	}
 
-	public void heapify(int i) {
+	public void minHeapify(int i) {
 		int lt = left(i);
 		int rt = right(i);
 		int smallest = i;
@@ -63,7 +63,7 @@ public class MinHeap {
 		
 		if(smallest != i) {
 			Utility.swap(data, i, smallest);
-			heapify(smallest);
+			minHeapify(smallest);
 		}
 	}
 
@@ -82,9 +82,60 @@ public class MinHeap {
 		res = data[size-1];
 		data[size-1] = 0;
 		size--;
-		heapify(0);
+		minHeapify(0);
 		
 		return res;
 	}
 
+	public void decreaseKey(int key, int val) {
+		data[key] = val;
+		while(key != 0 && data[key] < data[parent(key)]) {
+			Utility.swap(data, key, parent(key));
+			key = parent(key);
+		}
+	}
+
+	public void delete(int key) {
+		decreaseKey(key, Integer.MIN_VALUE);
+		extractMin();
+	}
+	
+	public void buildMinHeap() {
+		int s = parent(size-1);
+		for (int i = s; i >= 0; i--) {
+			minHeapify(i);
+		}
+	}
+
+	public void buildMaxHeap() {
+		int s = parent(size-1);
+		for (int i = s; i >= 0; i--) {
+			maxHeapify(i);
+		}
+	}
+
+	public void maxHeapify(int i) {
+		int lt = left(i);
+		int rt = right(i);
+		int largest = i;
+		
+		if(lt < size && data[lt] > data[i])
+			largest = lt;
+		if(rt < size && data[rt] > data[largest])
+			largest = rt;
+		
+		if(largest != i) {
+			Utility.swap(data, i, largest);
+			maxHeapify(largest);
+		}
+	}
+
+	public void sort(){
+		buildMaxHeap();
+		for (int i = size-1; i >= 1; i--) {
+			Utility.swap(data, i, 0);
+			size--;
+			maxHeapify(0);
+		}
+	}
 }

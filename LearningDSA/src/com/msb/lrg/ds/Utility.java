@@ -198,7 +198,7 @@ public class Utility {
 		} 
 	} 
 
-	public static void printBinaryHeap(MinHeap heap) {
+	public static void printBinaryHeap(Heap heap) {
 	    int a[] = heap.data;
 	    StringBuilder sb = new StringBuilder();
 	    int max=0;
