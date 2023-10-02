@@ -1,4 +1,4 @@
-package com.msb.lrg.sort;
+package com.msb.lrg.ds.sort;
 
 import java.util.Arrays;
 
