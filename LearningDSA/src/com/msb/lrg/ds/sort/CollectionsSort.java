@@ -2,7 +2,7 @@ package com.msb.lrg.ds.sort;
 
 import java.util.*;
 
-public class SortCollections {
+public class CollectionsSort {
 
 	public static void main(String[] args) {
 		List<Integer> list = new ArrayList<Integer>();

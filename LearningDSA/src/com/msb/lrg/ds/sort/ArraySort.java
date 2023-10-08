@@ -2,7 +2,7 @@ package com.msb.lrg.ds.sort;
 
 import java.util.Arrays;
 
-public class SortArray {
+public class ArraySort {
 
 	public static void main(String[] args) {
 		int[] arr1 = new int[]{35,20,12,30,25};
