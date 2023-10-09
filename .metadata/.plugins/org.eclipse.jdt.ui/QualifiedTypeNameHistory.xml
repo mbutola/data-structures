@@ -26,15 +26,17 @@
     <fullyQualifiedTypeName name="java.util.stream.Collectors"/>
     <fullyQualifiedTypeName name="java.awt.List"/>
     <fullyQualifiedTypeName name="java.util.List"/>
-    <fullyQualifiedTypeName name="java.util.Collections"/>
     <fullyQualifiedTypeName name="com.msb.lrg.ds.heap.BinaryHeapInsert"/>
     <fullyQualifiedTypeName name="com.msb.lrg.ds.MinHeap"/>
     <fullyQualifiedTypeName name="com.msb.lrg.ds.Heap"/>
-    <fullyQualifiedTypeName name="com.msb.lrg.ds.Utility"/>
     <fullyQualifiedTypeName name="java.lang.Comparable"/>
     <fullyQualifiedTypeName name="Test.MyPair"/>
     <fullyQualifiedTypeName name="com.msb.lrg.ds.heap.BiHeapMerKSortArrays.Triplet"/>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="java.util.PriorityQueue"/>
+    <fullyQualifiedTypeName name="java.util.Collections"/>
+    <fullyQualifiedTypeName name="com.msb.lrg.ds.sort.BubbleSort"/>
+    <fullyQualifiedTypeName name="com.msb.lrg.ds.Utility"/>
     <fullyQualifiedTypeName name="java.util.Arrays"/>
+    <fullyQualifiedTypeName name="com.msb.lrg.ds.sort.SelectionSort"/>
 </qualifiedTypeNameHistroy>
