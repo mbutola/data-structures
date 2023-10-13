@@ -36,9 +36,10 @@
     <fullyQualifiedTypeName name="java.util.PriorityQueue"/>
     <fullyQualifiedTypeName name="java.util.Collections"/>
     <fullyQualifiedTypeName name="com.msb.lrg.ds.sort.BubbleSort"/>
-    <fullyQualifiedTypeName name="com.msb.lrg.ds.Utility"/>
     <fullyQualifiedTypeName name="com.msb.lrg.ds.sort.SelectionSort"/>
     <fullyQualifiedTypeName name="com.msb.lrg.ds.sort.InsertionSort"/>
     <fullyQualifiedTypeName name="java.util.Arrays"/>
     <fullyQualifiedTypeName name="com.msb.lrg.ds.sort.MergeSort"/>
+    <fullyQualifiedTypeName name="com.msb.lrg.ds.Utility"/>
+    <fullyQualifiedTypeName name="com.msb.lrg.ds.sort.LomutoPartition"/>
 </qualifiedTypeNameHistroy>
