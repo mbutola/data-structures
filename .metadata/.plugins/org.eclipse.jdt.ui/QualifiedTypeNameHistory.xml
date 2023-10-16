@@ -29,17 +29,18 @@
     <fullyQualifiedTypeName name="com.msb.lrg.ds.heap.BinaryHeapInsert"/>
     <fullyQualifiedTypeName name="com.msb.lrg.ds.MinHeap"/>
     <fullyQualifiedTypeName name="com.msb.lrg.ds.Heap"/>
-    <fullyQualifiedTypeName name="java.lang.Comparable"/>
     <fullyQualifiedTypeName name="Test.MyPair"/>
     <fullyQualifiedTypeName name="com.msb.lrg.ds.heap.BiHeapMerKSortArrays.Triplet"/>
-    <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="java.util.PriorityQueue"/>
-    <fullyQualifiedTypeName name="java.util.Collections"/>
     <fullyQualifiedTypeName name="com.msb.lrg.ds.sort.BubbleSort"/>
     <fullyQualifiedTypeName name="com.msb.lrg.ds.sort.SelectionSort"/>
     <fullyQualifiedTypeName name="com.msb.lrg.ds.sort.InsertionSort"/>
-    <fullyQualifiedTypeName name="java.util.Arrays"/>
     <fullyQualifiedTypeName name="com.msb.lrg.ds.sort.MergeSort"/>
-    <fullyQualifiedTypeName name="com.msb.lrg.ds.Utility"/>
     <fullyQualifiedTypeName name="com.msb.lrg.ds.sort.LomutoPartition"/>
+    <fullyQualifiedTypeName name="com.msb.lrg.ds.sort.MergeOverlappingIntervals"/>
+    <fullyQualifiedTypeName name="java.lang.Comparable"/>
+    <fullyQualifiedTypeName name="com.msb.lrg.ds.Utility"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="java.util.Collections"/>
+    <fullyQualifiedTypeName name="java.util.Arrays"/>
 </qualifiedTypeNameHistroy>
