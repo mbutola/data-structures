@@ -43,4 +43,8 @@
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="java.util.Collections"/>
     <fullyQualifiedTypeName name="java.util.Arrays"/>
+    <fullyQualifiedTypeName name="com.msb.lrg.ds.search.IndexLastOccurence"/>
+    <fullyQualifiedTypeName name="com.msb.lrg.ds.search.IndexFirstOccurence"/>
+    <fullyQualifiedTypeName name="com.msb.lrg.ds.search.BinarySearch"/>
+    <fullyQualifiedTypeName name="com.msb.lrg.ds.search.RecursiveBinarySearch"/>
 </qualifiedTypeNameHistroy>
