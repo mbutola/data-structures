@@ -57,24 +57,30 @@ public class Utility {
 		String[] col = getArray(s1);
 		String[] row = getArray(s2);
 		for (int i = 0; i < memo[0].length; i++) {
-			if(i == 0) 
-				System.out.printf("%6s", 0);
-			else 
+			if(i == 0) { 
+				System.out.printf("%5s", "|");
+				System.out.printf("%3s", "0");
+			}else {
 				System.out.printf("%2s", row[i-1]);
-			System.out.printf("%2s", "");
+			}
+			System.out.printf("%3s", "");
 		}
 		System.out.println("");
+		int width = (memo[0].length)*6;
+		String line = String.join("", java.util.Collections.nCopies(width, "-"));
+		System.out.println(line);
 		for (int i = 0; i < memo.length; i++) {
 			if(i == 0)
 				System.out.printf("%2s",0);
 			else
-				System.out.printf("%2s", Integer.parseInt(col[i-1]));
-			System.out.printf("%2s", "");
+				System.out.printf("%2s", i);
+			System.out.printf("%3s", "|");
 			for (int j = 0; j < memo[0].length; j++) {
-				System.out.printf("%2d  ", memo[i][j]);
+				System.out.printf("%3d  ", memo[i][j]);
 			}
 			System.out.println("");
 		}
+		System.out.println("");
 	}
 
 	public static boolean isPalindrome(String str, int i, int j) {
