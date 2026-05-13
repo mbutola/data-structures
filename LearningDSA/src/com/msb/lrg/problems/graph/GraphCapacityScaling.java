@@ -137,6 +137,9 @@ public class GraphCapacityScaling {
 			this.from = from;
 			this.to = to;
 			this.capacity = capacity;
+			if(isReverse) {
+				this.capacity = 0;
+			}
 			this.flow = 0;
 		}
 		
@@ -144,9 +147,13 @@ public class GraphCapacityScaling {
 			return capacity - flow;
 		}
 		
+		void setFlow(int augmentFlow) {
+			augment(flow);
+		}
+		
 		void augment(int augmentFlow) {
 			flow += augmentFlow;
-			reverse.flow -= augmentFlow;
+			reverse.flow -= augmentFlow;;
 		}
 	}
 

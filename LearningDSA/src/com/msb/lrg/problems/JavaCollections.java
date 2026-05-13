@@ -373,7 +373,7 @@ public class JavaCollections {
 		// Currying / Partial Application
 		// Use Case: Pre-configure part of a function
 		System.out.println("6) Currying :: ");
-		Function<Integer, Function<Integer, Integer>> adder = a -> (b -> a + b);
+		Function<Integer, Function<Integer, Integer>> adder = a -> b -> a + b;
 		System.out.print("\t 5 + 10 = ");
 		 Function<Integer, Integer> add5 = adder.apply(5);
 		System.out.println(add5.apply(10));	

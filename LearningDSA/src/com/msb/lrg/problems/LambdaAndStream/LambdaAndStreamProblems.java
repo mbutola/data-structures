@@ -51,9 +51,9 @@ public class LambdaAndStreamProblems {
 	public static void main(String[] args) {
 //		problem1();
 //		problem2();
-//		problem3();
+		problem3();
 //		problem4();
-		problem5();
+//		problem5();
 	}
 	
 	static void problem5() {

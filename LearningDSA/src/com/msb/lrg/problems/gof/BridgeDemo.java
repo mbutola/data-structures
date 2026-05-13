@@ -13,7 +13,8 @@ package com.msb.lrg.problems.gof;
 			What the object does → Abstraction
 			How the object does it → Implementation
 	Problem It Solves
-		Imagine you want to create different Remote Controls (TV, Radio) with different types (BasicRemote, AdvancedRemote).
+		Imagine you want to create different Remote Controls (TV, Radio) with different types (BasicRemote, 
+		AdvancedRemote).
 		Naive approach → subclass everything:
 			BasicTvRemote
 			AdvancedTvRemote

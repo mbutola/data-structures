@@ -110,8 +110,7 @@ public class GraphDinic {
 		return graph;
 	}
 
-	static class Edge{
-		
+	static class Edge {
 		int from;
 		int to;
 		int capacity;
@@ -119,14 +118,14 @@ public class GraphDinic {
 		boolean isReverse;
 		Edge reverse;
 		
-		Edge (int from, int to, int capacity, boolean isReverse){
+		Edge(int from, int to, int capacity, boolean isReverse){
 			this.from = from;
 			this.to = to;
 			this.capacity = capacity;
-			this.flow = 0;
 			if(isReverse) {
 				this.capacity = 0;
 			}
+			this.flow = 0;
 		}
 		
 		int getResidualCapacity() {
@@ -134,7 +133,7 @@ public class GraphDinic {
 		}
 		
 		void setFlow(int augmentFlow) {
-			flow += augmentFlow;
+			augment(flow);
 		}
 		
 		void augment(int augmentFlow) {

@@ -6,7 +6,8 @@ import java.util.Arrays;
 
 What is the Subset Sum Problem?
 	The Subset Sum Problem asks:
-		Given a set (array) of integers and a target sum K, determine whether there exists a subset whose elements add up exactly to K.
+		Given a set (array) of integers and a target sum K, determine whether there exists a subset whose 
+		elements add up exactly to K.
 	Key points:
 		Order does not matter
 		Elements are not required to be contiguous

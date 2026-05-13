@@ -6,6 +6,8 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 
+import com.msb.lrg.problems.graph.GraphDinic.Edge;
+
 public class GraphEdmondKarp {
 
 	public static void main(String[] args) {
@@ -172,8 +174,7 @@ public class GraphEdmondKarp {
 		return graph;
 	}
 
-	static class Edge{
-		
+	static class Edge {
 		int from;
 		int to;
 		int capacity;
@@ -181,14 +182,12 @@ public class GraphEdmondKarp {
 		boolean isReverse;
 		Edge reverse;
 		
-		Edge (int from, int to, int capacity, boolean isReverse){
+		Edge(int from, int to, int capacity, boolean isReverse){
 			this.from = from;
 			this.to = to;
 			this.capacity = capacity;
 			this.flow = 0;
-			if(isReverse) {
-				this.capacity = 0;
-			}
+			this.isReverse = isReverse;
 		}
 		
 		int getResidualCapacity() {
@@ -196,7 +195,7 @@ public class GraphEdmondKarp {
 		}
 		
 		void setFlow(int augmentFlow) {
-			flow += augmentFlow;
+			augment(flow);
 		}
 		
 		void augment(int augmentFlow) {

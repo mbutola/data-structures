@@ -6,7 +6,8 @@ import java.util.List;
 /*
 
 	What is the Observer Pattern?
-	The Observer Pattern defines a one-to-many relationship between objects so that when one object changes state, all its dependents (observers) are notified automatically.
+	The Observer Pattern defines a one-to-many relationship between objects so that when one object changes 
+	  state, all its dependents (observers) are notified automatically.
 		In simple words:
 			It is a Publish–Subscribe pattern.
 			One object (Subject) broadcasts updates, and many Observers listen.

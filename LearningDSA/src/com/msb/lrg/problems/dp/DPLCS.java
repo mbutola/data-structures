@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 /*
 
-What is Longest Common Substring?
+What is Longest Common Subsequence?
 	Given two strings:
 		S1 = "abcde"
 		S2 = "abfce"

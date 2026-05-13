@@ -5,7 +5,8 @@ import java.util.Stack;
 /*
 
 	What is the Memento Pattern?
-	The Memento Pattern lets you capture and store an object’s internal state so it can be restored later, without exposing the object’s internals.
+	The Memento Pattern lets you capture and store an object’s internal state so it can be restored later, 
+	without exposing the object’s internals.
 		In simple words:
 			It enables Undo / Rollback functionality.
 		Purpose

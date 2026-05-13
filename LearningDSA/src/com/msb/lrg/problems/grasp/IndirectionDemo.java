@@ -4,7 +4,8 @@ package com.msb.lrg.problems.grasp;
 
 GRASP – Indirection
 	Principle
-		Assign responsibility to an intermediate object to decouple two other objects that would otherwise be directly dependent.
+		Assign responsibility to an intermediate object to decouple two other objects that would otherwise 
+		be directly dependent.
 	Used when:
 		One class should not depend on another directly
 		External systems / volatile APIs are involved

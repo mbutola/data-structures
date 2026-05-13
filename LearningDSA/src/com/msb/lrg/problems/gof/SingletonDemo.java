@@ -10,7 +10,8 @@ import java.lang.reflect.Constructor;
 /*
  	Singleton
  	Purpose: Ensure only one instance of a class exists globally and provide a global access point.
- 	Issue Solved: Multiple objects sharing same resource/config (like logging or DB connections) cause inconsistency or high cost.
+ 	Issue Solved: Multiple objects sharing same resource/config (like logging or DB connections) cause 
+ 	inconsistency or high cost.
  	How: Private constructor + static instance + global accessor.
  	Example: Logger.getInstance().log("error")
  */

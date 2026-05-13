@@ -3,7 +3,8 @@ package com.msb.lrg.problems.gof;
 /*
  	What Is the Prototype Pattern?
  	Prototype Pattern = "Make new objects by copying existing ones instead of building from scratch."
-	The Prototype Pattern is a creational design pattern that lets you create new objects by cloning existing ones, instead of instantiating new ones from scratch.
+	The Prototype Pattern is a creational design pattern that lets you create new objects by cloning 
+	existing ones, instead of instantiating new ones from scratch.
 	So rather than calling new, you say:
 		“Give me another object like this one.”
 	It’s useful when:

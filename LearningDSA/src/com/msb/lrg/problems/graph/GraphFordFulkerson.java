@@ -3,6 +3,8 @@ package com.msb.lrg.problems.graph;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.msb.lrg.problems.graph.GraphDinic.Edge;
+
 public class GraphFordFulkerson {
 
 //	static int N = 11;
@@ -111,8 +113,10 @@ public class GraphFordFulkerson {
 			int from = edge[0];
 			int to = edge[1];
 			int capacity = edge[2];
+			
 			Edge forwardEdge = new Edge(from, to, capacity, false);
 			Edge reverseEdge = new Edge(to, from, capacity, true);
+			
 			forwardEdge.reverse = reverseEdge;
 			reverseEdge.reverse = forwardEdge;
 			
@@ -124,39 +128,37 @@ public class GraphFordFulkerson {
 	}
 
 	static class Edge{
+		
 		int from;
 		int to;
 		int capacity;
-		int flow = 0;
-		boolean isReverse = false;
+		int flow;
+		boolean isReverse;
 		Edge reverse;
 		
-		Edge(int from, int to, int capacity, boolean isReverse){
+		Edge (int from, int to, int capacity, boolean isReverse){
 			this.from = from;
 			this.to = to;
 			this.capacity = capacity;
 			this.flow = 0;
-			if(isReverse) { 
+			if(isReverse) {
 				this.capacity = 0;
-				this.flow = -capacity;
 			}
-			this.isReverse = isReverse;
 		}
 		
 		int getResidualCapacity() {
 			return capacity - flow;
 		}
 		
-		void augment(int augmentFlow) {
-			setFlow(augmentFlow);
-			reverse.setFlow(augmentFlow);
-		}
-		
 		void setFlow(int augmentFlow) {
-			this.flow+=augmentFlow;
+			augment(flow);
 		}
 		
-	}		
+		void augment(int augmentFlow) {
+			flow += augmentFlow;
+			reverse.flow -= augmentFlow;;
+		}
+	}
 }
 
 

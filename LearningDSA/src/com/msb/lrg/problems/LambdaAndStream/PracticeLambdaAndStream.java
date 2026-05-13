@@ -23,25 +23,25 @@ public class PracticeLambdaAndStream {
 
     
     public static void main(String[] args) throws Exception {
-         printEvenNumbers();
-         printSquareOfNumbers();
-         printStringStartingWithA();
-         printMaxAndMin();
-         printNamesWithEachLetter();
-         printAvgSalOfEmp();
-         printJoinNamesWithComma();
-         printPartitionBySalary();
-         printFlatMap();
-         scenario1();
-         scenario2();
-         scenario3();
-         scenario4();
-         scenario5();
-         scenario6();
-         scenario7();
-         scenario8();
-         scenario10();
-         scenario11();
+//         printEvenNumbers();
+//         printSquareOfNumbers();
+//         printStringStartingWithA();
+//         printMaxAndMin();
+//         printNamesWithEachLetter();
+//         printAvgSalOfEmp();
+//         printJoinNamesWithComma();
+//         printPartitionBySalary();
+//         printFlatMap();
+//         scenario1();
+//         scenario2();
+//         scenario3();
+//         scenario4();
+//         scenario5();
+//         scenario6();
+//         scenario7();
+//         scenario8();
+//         scenario10();
+//         scenario11();
          scenario12();
 
     }
@@ -193,8 +193,8 @@ public class PracticeLambdaAndStream {
     
         Map<String, Map<Integer, Double>> report = sales.stream()
                                     .collect(Collectors.groupingBy(s -> s.region,
-                                                                Collectors.groupingBy(s -> s.year, 
-                                                                                    Collectors.summingDouble(s -> s.amount))));
+                                                            Collectors.groupingBy(s -> s.year, 
+                                                                          Collectors.summingDouble(s -> s.amount))));
        System.out.println(report);
     }
 
